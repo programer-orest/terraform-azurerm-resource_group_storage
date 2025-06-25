@@ -48,10 +48,6 @@ jobs:
         fi
         echo "outputs.tf is present in module 'resource_group_storage'."
         
-    - name: Configure Terraform Cloud CLI credentials
-      run: |
-        echo "credentials \"app.terraform.io\" { token = \"${{ secrets.TF_CLOUD_API_TOKEN }}\" }" > ~/.terraformrc
-
     - name: Terraform Fmt
       run: terraform fmt -check -recursive -diff
   

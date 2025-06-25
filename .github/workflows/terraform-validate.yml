@@ -3,6 +3,8 @@ name: Terraform Validate
 run-name: ${{ github.actor }} - ${{ github.ref_name }}
 
 on:
+  push:
+    branches: ["main"]
   pull_request:
     branches: ["main"]
 
